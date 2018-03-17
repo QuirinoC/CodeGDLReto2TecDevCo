@@ -14,3 +14,6 @@ for entry in col_genero:
         genero[entry] = 1
 
 print(genero)
+
+def ejemplo():
+    pass
