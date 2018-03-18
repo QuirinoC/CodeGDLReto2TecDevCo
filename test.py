@@ -43,8 +43,8 @@ files_csv = (pd.read_csv("2017/{0}".format(file), encoding='latin-1', low_memory
 
 total = sumDicts(readFiles(files_csv, count_freq))
 
-with open('output/totalDestinoId.csv', 'w') as f:
-    [f.write('{0},{1}\n'.format(key, value)) for key, value in sorted(total.items(), key=operator.itemgetter(1))]
+#with open('output/totalDestinoId.csv', 'w') as f:
+#    [f.write('{0},{1}\n'.format(key, value)) for key, value in sorted(total.items(), key=operator.itemgetter(1))]
 
 pprint(total)
 
@@ -53,11 +53,3 @@ maxVal = max(total, key=total.get)
 print(maxVal, total[maxVal])
 
 print("Done.")
-
-#print(count_freq(pd.read_csv('2017/datos_abiertos_2017_04.csv', encoding='latin-1', low_memory=False),'Origen_Id'))
-
-#dec = pd.read_csv('2017/datos_abiertos_2017_12.csv', chunksize=10, encoding='latin-1')
-#jan = pd.read_csv('2017/datos_abiertos_2017_12.csv', encoding='latin-1', low_memory=False)
-#print(next(jan['Genero']))
-
-#print(count_freq(jan,'Origen_Id'))
