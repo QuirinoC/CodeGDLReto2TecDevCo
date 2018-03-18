@@ -88,13 +88,11 @@ def map_color(x,y):
     else:
         return 'black'
     '''
-print(etiquetas_)
 x = etiquetas_['longitude']
 y = etiquetas_['latitude']
 
 colors = map_color(x,y)
 
-print(colors)
 plt.xlabel('Total de salidas')
 plt.ylabel('Total de llegadas')
 
@@ -142,7 +140,6 @@ range_longitude = etiquetas_['longitude'].max() - etiquetas_['longitude'].min()
 
 
 
-print(range_latitude, range_longitude)
 for label, x, y in zip(labels, np_origen, np_destino):
     plt.annotate(
         label,
