@@ -40,24 +40,26 @@ files = ["datos_abiertos_2017_0{0}.csv".format(x) for x in range(1,10)] + \
 
 #Create a generator of pandas DataFrames
 files_csv = (pd.read_csv("2017/{0}".format(file), encoding='latin-1', low_memory=False) for file in files)
+#Importante
+#total = sumDicts(readFiles(files_csv, count_freq))
 
-total = sumDicts(readFiles(files_csv, count_freq))
+#with open('output/totalDestinoId.csv', 'w') as f:
+#    [f.write('{0},{1}\n'.format(key, value)) for key, value in sorted(total.items(), key=operator.itemgetter(1))]
 
-with open('output/totalDestinoId.csv', 'w') as f:
-    [f.write('{0},{1}\n'.format(key, value)) for key, value in sorted(total.items(), key=operator.itemgetter(1))]
+#pprint(total)
 
-pprint(total)
+nomenclatura = (open("nomenclatura_1.csv", "r"))
+nomenclatura =nomenclatura.read().split('\n')
+nomenclatura = nomenclatura[:-1]
+estaciones = []
+length = len(nomenclatura)
+for line in nomenclatura:
+    cols = line.split(',')
+    estaciones.append([cols[0],cols[3],cols[4]])
+print(estaciones)
 
-maxVal = max(total, key=total.get)
 
-print(maxVal, total[maxVal])
+
+
 
 print("Done.")
-
-#print(count_freq(pd.read_csv('2017/datos_abiertos_2017_04.csv', encoding='latin-1', low_memory=False),'Origen_Id'))
-
-#dec = pd.read_csv('2017/datos_abiertos_2017_12.csv', chunksize=10, encoding='latin-1')
-#jan = pd.read_csv('2017/datos_abiertos_2017_12.csv', encoding='latin-1', low_memory=False)
-#print(next(jan['Genero']))
-
-#print(count_freq(jan,'Origen_Id'))
