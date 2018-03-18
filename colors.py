@@ -98,6 +98,8 @@ plt.ylabel('Total de llegadas')
 
 plt.grid(True)
 
+
+
 plt.text(49400, 60000, 'GDL - 049', ha='center',va='center')
 plt.text(46700, 50000, 'GDL - 048', ha='center',va='center')
 plt.text(42000, 43000, 'GDL - 050', ha='center',va='center')
@@ -106,13 +108,20 @@ plt.text(38000, 31500, 'GDL - 073', ha='center',va='center')
 plt.text(35000, 37500, 'GDL - 052', ha='center',va='center')
 plt.text(28000, 39000, 'GDL - 054', ha='center',va='center')
 
+
+
+
+#Labels mayores
 plt.text(-2600, 46000, " GDL - 049 Lopez Cotilla/ Marcos Castellanos \n \
 GDL - 048 C. Escorza / Av. Vallarta \n \
 GDL - 050 C. Pedro Moreno / Calz. Federalismo \n \
 GDL - 009 Calz. Federalismo/ C. J. Angulo \n \
 GDL - 073 Av. La Paz / Av. Federalismo \n \
 GDL - 052 Av. Juarez / Av. 16 de Septiembre \n \
-GDL - 054 Av. Juarez / Calz. Independencia", size=14)
+GDL - 054 Av. Juarez / Calz. Independencia", size=12)
+
+#Labels colores
+plt.text(-2000, 30000, "UDG - Rojo\nZapopan_Centro - Negro\nGuadalajara-Centro - Azul\nYellow")
 
 labels = np.array(etiquetas[:,1])
 #Aqui

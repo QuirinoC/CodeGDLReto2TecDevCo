@@ -54,4 +54,5 @@ plt.ylabel("Latitud")
 plt.xlabel("Longitud")
 plt.title("Slots por localizacion")
 plt.scatter(longitud,latitud, c=labels, alpha=0.5)
+
 plt.show()
